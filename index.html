@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación Julieta</title>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:wght@300;400;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Paleta extraída de tu imagen */
+            --arena-clara: #ece4d4;    /* Crema claro */
+            --arena-base: #d7c5b1;     /* Tono medio */
+            --beige-marino: #c4a484;   /* Arena húmeda */
+            --marron-tierra: #8b5e3c;  /* Marrón oscuro para textos/botones */
+            --blanco-espuma: #f9f7f2;  /* Fondo de tarjeta */
+        }
+
+        /* CONFIGURACIÓN DEL FONDO Y AJUSTE DE PANTALLA */
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url("agua juli.png");
+            background-size: cover
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-color: var(--arena-base);
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .tarjeta-larga {
+            width: 100%;
+            max-width: 500px;
+            background: rgba(249, 247, 242, 0.95); /* Color blanco espuma con transparencia */
+            min-height: 100vh;
+            box-shadow: 0 0 50px rgba(0,0,0,0.2);
+            text-align: center;
+            padding: 20px;
+            border-left: 10px solid white;
+            border-right: 10px solid white;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        /* TÍTULOS - Usando Marrón Tierra */
+        .quince-container {
+            padding-top: 50px;
+        }
+
+        .quince-numero {
+            font-family: 'Dancing Script', cursive;
+            font-size: clamp(6rem, 20vw, 10rem);
+            color: var(--marron-tierra);
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+            margin: 0;
+        }
+
+        .nombre-julieta {
+            font-family: 'Alex Brush', cursive;
+            font-size: clamp(3rem, 10vw, 4.5rem);
+            color: var(--marron-tierra);
+            margin-top: -40px;
+            margin-bottom: 20px;
+        }
+
+        .detalles {
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: var(--marron-tierra);
+            margin-top: 20px;
+        }
+
+        /* CAJAS DE INFORMACIÓN - Tonos Arena */
+        .caja-precios {
+            background: var(--arena-clara);
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 20px;
+            border: 2px dashed var(--beige-marino);
+            color: #5d4037;
+        }
+
+        .transferencia {
+            background: white;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 15px;
+            border: 2px solid var(--arena-base);
+            color: #5d4037;
+        }
+
+        .alias-destacado {
+            font-size: 1.2rem;
+            color: var(--marron-tierra);
+            font-weight: bold;
+            display: block;
+            margin: 10px 0;
+        }
+
+        /* FORMULARIO Y BOTONES */
+        .consultas {
+            margin: 30px 0;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid var(--arena-base);
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+            background-color: white;
+        }
+
+        #reloj {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .tiempo-unidad {
+            background: var(--marron-tierra);
+            color: white;
+            padding: 10px;
+            border-radius: 12px;
+            min-width: 60px;
+        }
+
+        /* BOTÓN ENVIAR CONSULTA */
+        .btn-enviar {
+            background-color: var(--beige-marino);
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn-enviar:hover {
+            background-color: var(--marron-tierra);
+        }
+
+        /* BOTÓN WHATSAPP */
+        .btn-confirmar {
+            display: block;
+            background-color: #8b5e3c; /* Mantenemos el verde para identificar WhatsApp */
+            color: white;
+            text-decoration: none;
+            padding: 18px;
+            margin: 20px 0;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            font-family: 'Montserrat', sans-serif;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            border-top: 1px solid var(--arena-base);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="tarjeta-larga">
+        <div class="quince-container">
+            <h1 class="quince-numero">15</h1>
+            <div class="nombre-julieta">Julieta</div>
+        </div>
+
+        <section>
+            <p class="detalles">18 DE ABRIL - 21:00 HORAS</p>
+            <p style="color: #5d4037;">📍 La Fontana</p>
+        </section>
+
+        <section class="caja-precios">
+            <h3 style="color: var(--marron-tierra); margin-top:0;">Valor de la Tarjeta</h3>
+            <p><strong>Mayores:</strong> $63.000</p>
+            <p><strong>Menores (4-11):</strong> $25.000</p>
+            <p><strong>Adolescentes:</strong> $45.000</p>
+        </section>
+
+        <section class="transferencia">
+            <h3 style="color: var(--marron-tierra);">Transferencia</h3>
+            <p>Alias: <span class="alias-destacado">Juli.15.Fest</span></p>
+            <p>CVU: 0000003100083671265943</p>
+            <p>Titular: Angeles Mariel Cordoba</p>
+            <p><small style="color: #888;">Luego de realizar la transferencia, enviá el comprobante al WhatsApp</small></p>
+        </section>
+
+        <section class="consultas">
+            <h3 style="text-align: center; color: var(--marron-tierra);">¿Alguna duda?</h3>
+            <input type="text" id="nombre-usuario" placeholder="Tu nombre completo">
+            <textarea id="duda-usuario" rows="3" placeholder="Escribe tu consulta aquí..."></textarea>
+            <button type="button" onclick="mandarDuda()" class="btn-enviar">
+                ENVIAR CONSULTA
+            </button>
+        </section>
+
+        <h3 style="color: var(--marron-tierra);">¡Falta muy poco!</h3>
+        <div id="reloj">
+            <div class="tiempo-unidad"><span id="dias" style="font-size:1.5rem; font-weight:bold;">00</span><br><small>DÍAS</small></div>
+            <div class="tiempo-unidad"><span id="horas" style="font-size:1.5rem; font-weight:bold;">00</span><br><small>HS</small></div>
+            <div class="tiempo-unidad"><span id="min" style="font-size:1.5rem; font-weight:bold;">00</span><br><small>MIN</small></div>
+            <div class="tiempo-unidad"><span id="seg" style="font-size:1.5rem; font-weight:bold;">00</span><br><small>SEG</small></div>
+        </div>
+
+        <button type="button" onclick="confirmarAsistencia()" class="btn-confirmar">
+            CONFIRMAR ASISTENCIA
+        </button>
+
+        <footer>
+            <div class="redes">
+                <span style="font-size: 2rem; filter: sepia(1);">📸</span> 
+                <span style="font-size: 2rem; margin-left: 20px; filter: sepia(1);">💬</span>
+            </div>
+            <p style="color: #999; font-size: 0.8rem; margin-top: 10px;">Julieta - 2026</p>
+        </footer>
+    </div>
+
+    <script>
+        const fiesta = new Date('April 18, 2026 21:00:00').getTime();
+        setInterval(() => {
+            const ahora = new Date().getTime();
+            const faltan = fiesta - ahora;
+            if (faltan > 0) {
+                document.getElementById('dias').innerText = Math.floor(faltan / (1000 * 60 * 60 * 24));
+                document.getElementById('horas').innerText = Math.floor((faltan % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                document.getElementById('min').innerText = Math.floor((faltan % (1000 * 60 * 60)) / (1000 * 60));
+                document.getElementById('seg').innerText = Math.floor((faltan % (1000 * 60)) / 1000);
+            }
+        }, 1000);
+
+        const numeroWhatsApp = "5493400589130"; 
+
+        function mandarDuda() {
+            const nombre = document.getElementById('nombre-usuario').value;
+            const duda = document.getElementById('duda-usuario').value;
+            if (nombre.trim() === "" || duda.trim() === "") {
+                alert("Por favor, completa tu nombre y tu duda.");
+                return;
+            }
+            const mensaje = "Hola, soy " + nombre + ". Tengo una consulta: " + duda;
+            window.open("https://api.whatsapp.com/send?phone=" + numeroWhatsApp + "&text=" + encodeURIComponent(mensaje), '_blank');
+        }
+
+        function confirmarAsistencia() {
+            const nombre = document.getElementById('nombre-usuario').value;
+            if (nombre.trim() === "") {
+                alert("Por favor, escribe tu nombre en el cuadro de arriba antes de confirmar.");
+                document.getElementById('nombre-usuario').focus();
+                return;
+            }
+            const mensaje = "¡Hola! Soy " + nombre + " y confirmo mi asistencia al cumple de Juu :) ¡Nos vemos!";
+            window.open("https://api.whatsapp.com/send?phone=" + numeroWhatsApp + "&text=" + encodeURIComponent(mensaje), '_blank');
+        }
+    </script>
+</body>
+</html>
